@@ -23,6 +23,7 @@ pipeline {
         stage('TestDL') {
             steps {
                 script {
+                    dir('DeepLearning')
                     // Assurez-vous d'activer l'environnement virtuel avant l'exécution
                     sh '''
                     . venv/bin/activate
