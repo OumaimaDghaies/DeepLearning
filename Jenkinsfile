@@ -14,7 +14,7 @@ pipeline {
         }
         stage('TestDL') {
             steps {
-                sh './jenkins/scripts/test.sh'
+                sh 'python3 main2.py'
             }
         }
         
