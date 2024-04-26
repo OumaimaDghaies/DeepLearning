@@ -20,18 +20,16 @@ pipeline {
                 '''
             }
         }
-        stage('TestDL') {
+       
+
+        stage('Déploiement') {
             steps {
+                // Commandes pour démarrer votre application Streamlit
                 script {
-                    dir('DeepLearning')
-                    // Assurez-vous d'activer l'environnement virtuel avant l'exécution
-                    sh '''
-                    . venv/bin/activate
-                    python3 main2.py
-                    deactivate
-                    '''
+                    sh 'streamlit run main2.py '
                 }
             }
         }
+
     }
 }
