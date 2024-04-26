@@ -26,7 +26,16 @@ pipeline {
             steps {
                 // Commandes pour démarrer votre application Streamlit
                 script {
-                    sh 'streamlit run main2.py '
+                    sh '''
+                    # Ensure the virtual environment is activated
+                    . venv/bin/activate
+
+                    # Run the Streamlit application
+                    streamlit run main2.py
+
+                    # Optionally, deactivate the virtual environment afterward
+                    deactivate
+                    '''
                 }
             }
         }
