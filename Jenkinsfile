@@ -10,24 +10,7 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                script {
-                    // Commande pour exécuter un script Python
-                    sh 'python3 main2.py'
-                    
-                }
-            }
-        }
-
-        stage('Déploiement') {
-            steps {
-                // Commandes pour démarrer votre application Streamlit
-                script {
-                    sh 'streamlit run main2.py &'
-                }
-            }
-        }
+        
     }
 
     
