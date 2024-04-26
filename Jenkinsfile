@@ -12,6 +12,11 @@ pipeline {
                 '''
             }
         }
+        stage('TestDL') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
         
         
     }
